@@ -13,7 +13,7 @@ func main() {
 	e := echo.New()
 	e.Debug = true
 
-	e.Static("/static", "../../assets")
+	e.Static("/static", "web/static")
 
 	e.GET("/", func(c echo.Context) error { return HTML(c, ui.Index()) })
 	e.GET("/toast", func(c echo.Context) error {

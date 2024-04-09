@@ -5,7 +5,7 @@ build: ## build the service
 
 run: ## run the service
 	make build
-	watch-css
+	make watch-css
 	air
 
 build-css: ## build minified css
