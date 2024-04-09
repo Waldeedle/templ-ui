@@ -1,0 +1,31 @@
+package ui
+
+templ Index() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>Components Test Page</title>
+			// htmx deps
+			<script src="static/htmx.min.js" type="text/javascript"></script>
+			// tailwind deps (to be replaced with postcss)
+			<script src="static/main.css"></script>
+			// alpine deps
+			<script src="static/alpinejs.min.js" type="text/javascript"></script>
+			<style>[x-cloak]{display:none}</style>
+		</head>
+		<body>
+			<div class="container flex justify-center items-center h-screen">
+				<button
+ 					hx-get="/toast"
+ 					hx-swap="none"
+ 					class="inline-flex items-center justify-center flex-shrink-0 px-3 py-1 text-xs font-medium transition-colors border rounded-md h-9 hover:bg-gray-50 active:bg-white focus:bg-white focus:outline-none"
+				>
+					Default
+				</button>
+				{! Toaster() }
+			</div>
+		</body>
+	</html>
+}

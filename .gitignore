@@ -1,0 +1,12 @@
+__*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+__debug_bin*
+vendor/
+go.work
+.DS_Store
+cmd/**/bin/*
+*_templ.go
